@@ -1,0 +1,12 @@
+<div class="grid grid-cols-4">
+  <app-product-card
+    *ngFor="
+      let product of listProducts
+        | paginate : { itemsPerPage: 16, currentPage: p }
+    "
+    [product]="product"
+    class="m-4"
+  ></app-product-card>
+</div>
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
