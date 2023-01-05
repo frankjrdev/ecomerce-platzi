@@ -1,21 +1,27 @@
-<div class="w-60 h-full shadow-md bg-gray-700 absolute" id="sidenavSecExample">
+<div class="w-50 h-full shadow-md bg-white absolute" id="sidenavSecExample">
   <div>
-    <p class="tex">Product categories</p>
+    <p class="font-sans font-semibold">CATEGORIES</p>
 
     <ul>
-      <li>
-        <a routerLink="categories/{}"></a>
+      <li *ngFor="let categorie of listCategories">
+        <a
+          class="font-sans font-medium text-center text-base text-gray-500 ml-4"
+          routerLink="categories/{}"
+          >{{ categorie.name }}</a
+        >
       </li>
     </ul>
   </div>
 
   <div>
-    <p>Filter by price</p>
+    <p class="font-sans font-semibold">FILTER BY PRICE</p>
     <!-- barra de precio -->
   </div>
 
+  <div>busqueda</div>
+
   <div>
-    <p>Featured Products</p>
+    <p class="font-sans font-semibold">FEATURED PRODUCTS</p>
     <div>
       <img src="" alt="" />
       <div>Title</div>
