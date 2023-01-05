@@ -1,0 +1,15 @@
+<ng-container *ngIf="product">
+  <img
+    [ngSrc]="product.images[0]"
+    alt=""
+    class="image"
+    width="200"
+    height="350"
+  />
+  <div>
+    <p class="font-sans text-base text-gray-700 font-medium">
+      {{ product.title }}
+    </p>
+    <p class="font-serif text-sm font-bold">{{ product.price }}$</p>
+  </div>
+</ng-container>
